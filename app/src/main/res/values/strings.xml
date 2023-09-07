@@ -4,4 +4,7 @@
   -->
 <resources>
     <string name="app_name">Firewall</string>
+
+    <!-- AppList Fragment -->
+    <string name="app_logo">App\'s logo</string>
 </resources>
