@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "116438ec_5c13353f",
+        "filename": ".idea/scopes/XML_Files.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-07T13:59:27Z",
+      "side": 1,
+      "message": "😊",
+      "revId": "770d8471e602448f1b4abf103d2899c0aab63b1e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c73e0894_72585055",
+        "filename": "app/src/main/AndroidManifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-07T13:59:27Z",
+      "side": 1,
+      "message": "The current app doesn\u0027t have any data. We may have some data in the future, but there\u0027s none right now.",
+      "revId": "770d8471e602448f1b4abf103d2899c0aab63b1e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
