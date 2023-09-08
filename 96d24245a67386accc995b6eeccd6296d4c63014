@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93f492ef_3e65db43",
+        "filename": "app/src/main/java/org/calyxos/datura/utils/CommonUtils.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-08T19:40:25Z",
+      "side": 1,
+      "message": "Existing app shows apps without INTERNET permission too.",
+      "revId": "96d24245a67386accc995b6eeccd6296d4c63014",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

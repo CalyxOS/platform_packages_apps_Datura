@@ -16,6 +16,41 @@
       "message": "Well works but material library is outdated in AOSP (just like always ❤️)",
       "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc760207_5a90a4c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-08T19:40:25Z",
+      "side": 1,
+      "message": "Let\u0027s see what things are like once 14 is out and then we can decide.\n\nI have no issues if this becomes gradle only in the future, for example. Or if we check in newer libs in some repo (here, or a new common prebuilts repo, or a new per-app prebuilts repo)",
+      "parentUuid": "e2b78d54_75e088f7",
+      "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40b7148d_9a859ec3",
+        "filename": "app/src/main/java/org/calyxos/datura/utils/CommonUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-08T19:40:25Z",
+      "side": 1,
+      "message": "TODO (because we want system apps too)",
+      "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
