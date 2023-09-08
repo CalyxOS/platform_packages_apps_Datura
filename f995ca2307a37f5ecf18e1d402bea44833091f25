@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2b78d54_75e088f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-08T19:13:25Z",
+      "side": 1,
+      "message": "Well works but material library is outdated in AOSP (just like always ❤️)",
+      "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
