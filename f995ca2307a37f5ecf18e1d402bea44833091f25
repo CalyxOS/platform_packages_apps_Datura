@@ -51,6 +51,24 @@
       "message": "TODO (because we want system apps too)",
       "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5837e82f_bccc7164",
+        "filename": "app/src/main/java/org/calyxos/datura/utils/CommonUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-09T12:11:10Z",
+      "side": 1,
+      "message": "Ack. This is for separating things in UI (user apps and system apps) as the current one.",
+      "parentUuid": "40b7148d_9a859ec3",
+      "revId": "f995ca2307a37f5ecf18e1d402bea44833091f25",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
