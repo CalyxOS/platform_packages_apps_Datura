@@ -34,6 +34,24 @@
       "parentUuid": "93f492ef_3e65db43",
       "revId": "96d24245a67386accc995b6eeccd6296d4c63014",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "038bb908_5f3ed2c3",
+        "filename": "app/src/main/java/org/calyxos/datura/utils/CommonUtils.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-12T15:09:35Z",
+      "side": 1,
+      "message": "Alright, note that it\u0027s \"Filter out system apps without INTERNET permission\"\n\nuser apps without INTERNET permission are still shown.",
+      "parentUuid": "4d6c85f7_4be2dc86",
+      "revId": "96d24245a67386accc995b6eeccd6296d4c63014",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
