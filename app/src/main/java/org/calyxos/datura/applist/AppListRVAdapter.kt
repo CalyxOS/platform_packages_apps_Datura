@@ -7,10 +7,16 @@ package org.calyxos.datura.applist
 
 import android.net.NetworkPolicyManager
 import android.net.NetworkPolicyManager.POLICY_REJECT_ALL
+import android.net.NetworkPolicyManager.POLICY_REJECT_CELLULAR
+import android.net.NetworkPolicyManager.POLICY_REJECT_METERED_BACKGROUND
+import android.net.NetworkPolicyManager.POLICY_REJECT_VPN
+import android.net.NetworkPolicyManager.POLICY_REJECT_WIFI
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.isVisible
@@ -27,6 +33,8 @@ class AppListRVAdapter @Inject constructor(
     appListDiffUtil: AppListDiffUtil,
     private val networkPolicyManager: NetworkPolicyManager
 ) : ListAdapter<App, AppListRVAdapter.ViewHolder>(appListDiffUtil) {
+
+    private val TAG = AppListRVAdapter::class.java.simpleName
 
     inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view)
 
@@ -59,25 +67,63 @@ class AppListRVAdapter @Inject constructor(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val app = getItem(position)
 
+        // Map of switches to their policy
+        val mapOfViewAndPolicy = mapOf(
+            R.id.mainSwitch to POLICY_REJECT_ALL,
+            R.id.backgroundSwitch to POLICY_REJECT_METERED_BACKGROUND,
+            R.id.wifiSwitch to POLICY_REJECT_WIFI,
+            R.id.mobileSwitch to POLICY_REJECT_CELLULAR,
+            R.id.vpnSwitch to POLICY_REJECT_VPN
+        )
+
         holder.view.apply {
             findViewById<ImageView>(R.id.appIcon).background = app.icon.toDrawable(resources)
             findViewById<TextView>(R.id.appName).text = app.name
             findViewById<TextView>(R.id.appPkgName).text = app.packageName
 
-            // Main Switch (POLICY_REJECT_ALL)
-            // Checked/0 == Allowed to connect to internet (default)
-            findViewById<MaterialSwitch>(R.id.mainSwitch).apply {
-                isEnabled = app.requestsInternetPermission
-                isChecked =
-                    (networkPolicyManager.getUidPolicy(app.uid) and POLICY_REJECT_ALL) == 0 &&
-                    app.requestsInternetPermission
+            val settingsMode = findViewById<TextView>(R.id.settingsMode)
 
-                setOnCheckedChangeListener { _, isChecked ->
-                    if (isVisible) {
-                        if (isChecked) {
-                            networkPolicyManager.removeUidPolicy(app.uid, POLICY_REJECT_ALL)
+            // Expand layout on root view click
+            setOnClickListener {
+                if (app.requestsInternetPermission) {
+                    findViewById<LinearLayout>(R.id.expandLayout).apply {
+                        if (this.isVisible) {
+                            settingsMode.setCompoundDrawablesWithIntrinsicBounds(
+                                0,
+                                0,
+                                R.drawable.ic_arrow_down,
+                                0
+                            )
+                            this.visibility = View.GONE
                         } else {
-                            networkPolicyManager.addUidPolicy(app.uid, POLICY_REJECT_ALL)
+                            settingsMode.setCompoundDrawablesWithIntrinsicBounds(
+                                0,
+                                0,
+                                R.drawable.ic_arrow_up,
+                                0
+                            )
+                            this.visibility = View.VISIBLE
+                        }
+                    }
+                }
+            }
+
+            // Switches, Checked/0 == Allowed to connect to internet (default)
+            mapOfViewAndPolicy.forEach { (viewID, policy) ->
+                findViewById<MaterialSwitch>(viewID).apply {
+                    isEnabled = app.requestsInternetPermission
+                    isChecked =
+                        (networkPolicyManager.getUidPolicy(app.uid) and policy) == 0 &&
+                            app.requestsInternetPermission
+
+                    setOnCheckedChangeListener { _, isChecked ->
+                        if (isVisible) {
+                            Log.i(TAG, "Updating ${app.packageName}'s policy: $policy $isChecked")
+                            if (isChecked) {
+                                networkPolicyManager.removeUidPolicy(app.uid, policy)
+                            } else {
+                                networkPolicyManager.addUidPolicy(app.uid, policy)
+                            }
                         }
                     }
                 }
