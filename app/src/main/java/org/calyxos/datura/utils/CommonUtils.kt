@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import androidx.core.graphics.drawable.toBitmap
+import android.os.Process
 import org.calyxos.datura.models.App
 
 object CommonUtils {
@@ -20,7 +21,7 @@ object CommonUtils {
 
         val packageList = packageManager.getInstalledPackages(
             PackageManager.PackageInfoFlags.of(PackageManager.GET_PERMISSIONS.toLong())
-        )
+        ).filter { isApp(it.applicationInfo.uid) }
 
         packageList.forEach { packageInfo ->
             val app = App(
@@ -38,5 +39,15 @@ object CommonUtils {
         // https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Firewall/+/7295
         applicationList.sortBy { it.name }
         return applicationList.filterNot { it.systemApp && !it.requestsInternetPermission }
+    }
+
+    // Logic mirrored from frameworks/base/core/java/android/os/UserHandle.java
+    private fun isApp(uid: Int): Boolean {
+        return if (uid > 0) {
+            val appId = uid % 100000
+            appId >= Process.FIRST_APPLICATION_UID && appId <= Process.LAST_APPLICATION_UID
+        } else {
+            false
+        }
     }
 }
