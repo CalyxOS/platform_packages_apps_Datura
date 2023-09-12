@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15c6bbe0_e7ce8822",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-12T18:17:07Z",
+      "side": 1,
+      "message": "This is clearly from https://gitlab.com/CalyxOS/platform_packages_apps_Firewall/-/commit/7c0d3129e577e3c65b4ddedafd6dd0d0158ddaf4 \n\nAuthorship should be preserved. It\u0027s not a big deal here, since this is copying code from frameworks, but in general this is a good practice to follow.",
+      "revId": "e43930dcd7f0a57ff5eeea183941fc7a8acb890b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fec90bc0_4a008282",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-12T18:17:07Z",
+      "side": 1,
+      "message": "Also, we ran into this before, 3476: Use public API to check if uid is an app. | https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Firewall/+/3476",
+      "revId": "e43930dcd7f0a57ff5eeea183941fc7a8acb890b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "905917c3_32912d31",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-12T18:17:07Z",
+      "side": 1,
+      "message": "This is what I\u0027d try with ASfP",
+      "revId": "e43930dcd7f0a57ff5eeea183941fc7a8acb890b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
