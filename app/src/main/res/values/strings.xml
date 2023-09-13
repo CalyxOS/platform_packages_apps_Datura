@@ -15,4 +15,15 @@
     <string name="allow_wifi_data">Allow Wi-Fi data</string>
     <string name="allow_mobile_data">Allow mobile data</string>
     <string name="allow_vpn_data">Allow VPN data</string>
+
+    <!-- About Fragment -->
+    <string name="about">About</string>
+    <string name="about_summary">A firewall application using Android\'s internal network API.</string>
+    <string name="about_feature">It allows users to restrict internet access of both system and user apps, across different types of network connections such as Wi-Fi, cellular, VPN, etc.</string>
+    <string name="about_version" translatable="false">Version: 12-1.0</string>
+    <string name="contributors_title">Contributors</string>
+    <string name="contributors_summary">Please see GitHub for a <a href="https://gitlab.com/CalyxOS/platform_packages_apps_Datura/-/graphs/android13">list of contributors</a>.</string>
+    <string name="contributing_orgs_title">Contributing Organizations</string>
+    <string name="contributing_orgs_summary"><a href="https://www.calyxinstitute.org">Calyx Institute</a> for use in <a href="https://calyxos.org">CalyxOS</a></string>
+
 </resources>
