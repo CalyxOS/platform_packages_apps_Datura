@@ -79,7 +79,6 @@ class AppListRVAdapter @Inject constructor(
         holder.view.apply {
             findViewById<ImageView>(R.id.appIcon).background = app.icon.toDrawable(resources)
             findViewById<TextView>(R.id.appName).text = app.name
-            findViewById<TextView>(R.id.appPkgName).text = app.packageName
 
             // Expand layout on root view click
             expandLayout(holder.view, app.isExpanded)

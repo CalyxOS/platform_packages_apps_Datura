@@ -66,23 +66,13 @@
                 tools:text="@string/app_name" />
 
             <TextView
-                android:id="@+id/appPkgName"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="14sp"
-                tools:text="org.calyxos.panic" />
-
-            <TextView
                 android:id="@+id/settingsMode"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/default_settings"
                 android:textColor="?android:textColorSecondary"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:drawableEndCompat="@drawable/ic_arrow_down" />
 
         </LinearLayout>
