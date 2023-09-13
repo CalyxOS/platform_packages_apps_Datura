@@ -22,6 +22,47 @@
       },
       "revId": "d7b2c26d6ecc8cc2865e78a28c0b059f4c6677a8",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b46e1970_9e5cd6b0",
+        "filename": "app/src/main/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-13T23:06:59Z",
+      "side": 1,
+      "message": "There\u0027s a line about it in the current app too.",
+      "parentUuid": "48c425da_c158d252",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 196
+      },
+      "revId": "d7b2c26d6ecc8cc2865e78a28c0b059f4c6677a8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12981323_0ec1c50d",
+        "filename": "app/src/main/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-13T23:06:59Z",
+      "side": 1,
+      "message": "Version shouldn\u0027t be static!",
+      "revId": "d7b2c26d6ecc8cc2865e78a28c0b059f4c6677a8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
