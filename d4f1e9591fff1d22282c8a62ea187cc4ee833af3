@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce79f9c4_d228a99e",
+        "filename": "Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-14T16:12:59Z",
+      "side": 1,
+      "message": "Add `overrides: [\"Firewall\"],`",
+      "revId": "d4f1e9591fff1d22282c8a62ea187cc4ee833af3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
