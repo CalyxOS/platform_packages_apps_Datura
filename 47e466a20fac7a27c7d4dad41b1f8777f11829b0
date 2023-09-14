@@ -33,6 +33,24 @@
       "message": "is it automatically given to system apps?",
       "revId": "47e466a20fac7a27c7d4dad41b1f8777f11829b0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3bb28b5_ccdeedff",
+        "filename": "app/src/main/AndroidManifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-14T18:50:30Z",
+      "side": 1,
+      "message": "Yes, to platform apps",
+      "parentUuid": "5d794b44_6ea68af5",
+      "revId": "47e466a20fac7a27c7d4dad41b1f8777f11829b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
