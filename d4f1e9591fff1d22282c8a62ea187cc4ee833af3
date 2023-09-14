@@ -16,6 +16,24 @@
       "message": "Add `overrides: [\"Firewall\"],`",
       "revId": "d4f1e9591fff1d22282c8a62ea187cc4ee833af3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7d4e305_b83aba06",
+        "filename": "Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-14T18:45:04Z",
+      "side": 1,
+      "message": "Done in I41358d1ed0a7234ee12688aa2eb89d52f393af18",
+      "parentUuid": "ce79f9c4_d228a99e",
+      "revId": "d4f1e9591fff1d22282c8a62ea187cc4ee833af3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
