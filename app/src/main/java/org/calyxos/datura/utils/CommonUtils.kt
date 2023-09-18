@@ -51,6 +51,14 @@ object CommonUtils {
                 it.packageName,
                 PackageManager.PackageInfoFlags.of(PackageManager.GET_PERMISSIONS.toLong())
             )
+            val systemApp = it.flags and ApplicationInfo.FLAG_SYSTEM != 0
+            val requestsInternetPermission =
+                pkgInfo.requestedPermissions?.contains(Manifest.permission.INTERNET) ?: false
+
+            // Filter out system apps without internet permission
+            // https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Firewall/+/7295
+            if (systemApp && !requestsInternetPermission) return@forEach
+
             val app = App(
                 it.loadLabel(packageManager).toString(),
                 it.packageName,
@@ -58,7 +66,7 @@ object CommonUtils {
                     it.loadIcon(packageManager),
                     UserHandle.getUserHandleForUid(it.uid)
                 ).toBitmap(96, 96),
-                it.flags and ApplicationInfo.FLAG_SYSTEM != 0,
+                systemApp,
                 it.uid,
                 pkgInfo.requestedPermissions?.contains(Manifest.permission.INTERNET) ?: false,
                 false,
@@ -68,10 +76,8 @@ object CommonUtils {
             applicationList.add(app)
         }
 
-        // Filter out system apps without internet permission
-        // https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Firewall/+/7295
         applicationList.sortWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
-        return applicationList.filterNot { it.systemApp && !it.requestsInternetPermission }
+        return applicationList
     }
 
     private fun getUsageStats(context: Context): List<UsageStats> {
