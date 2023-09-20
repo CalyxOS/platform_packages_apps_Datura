@@ -141,10 +141,12 @@ class AppListRVAdapter @Inject constructor(
             }
 
             // Switches, Checked/0 == Allowed to connect to internet (default)
+            val mainSwitchEnabled =
+                (networkPolicyManager.getUidPolicy(app.uid) and POLICY_REJECT_ALL) == 0
             mapOfViewAndPolicy.forEach { (viewID, policy) ->
                 findViewById<MaterialSwitch>(viewID).apply {
                     setOnCheckedChangeListener(null)
-                    isEnabled = app.requestsInternetPermission
+                    isEnabled = app.requestsInternetPermission && mainSwitchEnabled
                     isChecked =
                         (networkPolicyManager.getUidPolicy(app.uid) and policy) == 0 &&
                         app.requestsInternetPermission
