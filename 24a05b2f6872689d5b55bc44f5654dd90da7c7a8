@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a10f5046_69d6af3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-21T04:39:57Z",
+      "side": 1,
+      "message": "Fails to install over existing app with gradle, might need to be first replaced in system I guess",
+      "revId": "24a05b2f6872689d5b55bc44f5654dd90da7c7a8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
