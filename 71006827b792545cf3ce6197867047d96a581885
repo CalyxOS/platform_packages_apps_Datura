@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46e5c4c0_fa74e17c",
+        "filename": "app/src/main/res/drawable/ic_cell.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-21T20:40:24Z",
+      "side": 1,
+      "message": "If these icons were copy-pasted from AOSP, then this wouldn\u0027t be the right copyright.",
+      "revId": "71006827b792545cf3ce6197867047d96a581885",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
