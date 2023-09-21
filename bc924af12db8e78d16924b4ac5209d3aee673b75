@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78413d50_b39468e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-21T20:47:28Z",
+      "side": 1,
+      "message": "Could be better I think, but I don\u0027t have a better suggestion yet and these do look ok for now.",
+      "revId": "bc924af12db8e78d16924b4ac5209d3aee673b75",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
